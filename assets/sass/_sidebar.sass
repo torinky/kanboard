@@ -12,13 +12,20 @@
 .sidebar-content
   padding-left: 10px
   flex: 1 100%
+  max-width: 85%
+  overflow-wrap: break-word
 
   @include sm-device
     padding-left: 0
     order: 1
+    max-width: 100%
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)
+    max-width: 75%
 
 .sidebar
-  width: 250px
+  max-width: 25%
+  min-width: 230px
 
   @include sm-device
     flex: 1 auto
